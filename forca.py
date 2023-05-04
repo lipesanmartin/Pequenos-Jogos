@@ -64,7 +64,7 @@ def printar_forca(erros):
         print("|         |")
         print("|        / \\")
         print("====")
-        print("Você perdeu RIP")
+
 
 
 with open('palavras.txt', 'r', encoding='utf8') as arquivo:  # abre o arquivo de palavras
@@ -106,3 +106,4 @@ while erro < 6:
     print(*enigma)
     printar_forca(erro)
     print("Já inseridas: ", *letras_inseridas)
+print(f"Você perdeu RIP. A palavra era{palavra.upper()}")
