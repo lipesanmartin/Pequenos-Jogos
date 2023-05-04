@@ -51,7 +51,7 @@ def printar_forca(erros):
     if erros == 5:
         print("+---------+")
         print("|         |")
-        print("|       (',') ")
+        print("|       ('.') ")
         print("|        /|\\")
         print("|         |")
         print("|          \\")
@@ -106,4 +106,5 @@ while erro < 6:
     print(*enigma)
     printar_forca(erro)
     print("Já inseridas: ", *letras_inseridas)
-print(f"Você perdeu RIP. A palavra era{palavra.upper()}")
+if erro == 6:
+    print(f"Você perdeu RIP. A palavra era {palavra.upper()}")
