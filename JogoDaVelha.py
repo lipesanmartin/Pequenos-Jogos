@@ -40,7 +40,7 @@ class JogoDaVelha:
         while True:
             try:
                 lin, col = list(map(int, input(f"Insira linha e coluna de sua jogada, jogador {jogador}: ").split()))
-                if lin or col not in range(1, 4):
+                if lin not in range(1, 4) or col not in range(1, 4):
                     print("Coordenadas inválidas. Tente novamente.")
                 if self.tabuleiro[lin - 1][col - 1] in ["X", "O"]:
                     print("Espaço já preenchido. Tente novamente")
