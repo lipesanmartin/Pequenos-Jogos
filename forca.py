@@ -82,7 +82,7 @@ for i in range(len(palavra_simples)):
         enigma[i] = '-'
 letras_inseridas = []
 print(*enigma)
-while erro < 5:
+while erro < 6:
     while True:
         letra = input('Insira uma letra: ').upper()
         # garante que é apenas uma letra e que não consta na lista das ja inseridas
