@@ -83,7 +83,7 @@ if __name__ == '__main__':
     jogo = JogoDaVelha()
     while True:
         jogo.jogar()
-        cont = str(input("Deseja jogar novamente? S/N: "))
-        if cont.upper() == 'N':
+        cont = str(input("Insira qualquer comando para jogar novamente ou 0 para finalizar: "))
+        if cont == '0':
             break
     print("Jogo finalizado.")
