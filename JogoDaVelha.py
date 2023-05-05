@@ -4,6 +4,9 @@ class JogoDaVelha:
         self.jogador_o = "O"
         self.tabuleiro = [[" "] * 3, [" "] * 3, [" "] * 3]
 
+    def zerar_tabuleiro(self):
+        self.tabuleiro = [[" "] * 3, [" "] * 3, [" "] * 3]
+
     def montar_tabuleiro(self):  # monta o tabuleiro
         for x in range(3):
             print(*self.tabuleiro[x][0], "|", *self.tabuleiro[x][1], "|", *self.tabuleiro[x][2])
@@ -56,7 +59,7 @@ class JogoDaVelha:
               " BOM JOGO!")
         self.montar_tabuleiro()
         rodada = 0
-        while rodada <= 9:
+        while rodada < 9:
             if rodada % 2 == 1:
                 self.fazer_jogada(self.jogador_x)
                 rodada += 1
@@ -82,6 +85,7 @@ class JogoDaVelha:
 if __name__ == '__main__':
     jogo = JogoDaVelha()
     while True:
+        jogo.zerar_tabuleiro()
         jogo.jogar()
         cont = str(input("Insira qualquer comando para jogar novamente ou 0 para finalizar: "))
         if cont == '0':
