@@ -104,8 +104,8 @@ def jogo():
             print(*enigma)
             print(f"Você venceu!! A palavra era {palavra.upper()}")
             break
-        print(*enigma)
         printar_forca(erro)
+        print(*enigma)
         print("Já inseridas: ", *letras_inseridas)
     if erro == 6:
         print(f"Você perdeu RIP. A palavra era {palavra.upper()}")
